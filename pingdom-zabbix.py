@@ -83,7 +83,7 @@ def zabbix_status(pingdom_data):
 # pingdom lastresponsetime -> zabbix trapper
 #
 def zabbix_resptime(pingdom_data):
-    for check in data:
+    for check in pingdom_data:
         cmd_args = [
             'zabbix_sender',
             '-z', config.get('ZABBIX', 'server'),
